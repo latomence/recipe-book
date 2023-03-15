@@ -20,27 +20,16 @@ function RecipeForm({ addRecipe }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="title">Title:</label>
-            <input
-                type="text"
+        <form className="new-recipe-form" onSubmit={handleSubmit}>
+            <input 
+                type="text" 
                 id="title"
                 value={title}
-                onChange={(event) => setTitle(event.target.value)}
+                onChange={(event) => setTitle(event.target.value)} 
+                className="recipe-title-input" 
+                placeholder="Add a new recipe..."
             />
-            <label htmlFor="description">Description:</label>
-            <textarea
-                id="description"
-                value={description}
-                onChange={(event) => setDescription(event.target.value)}
-            />
-            <label htmlFor="ingredients">Ingredients:</label>
-            <textarea
-                id="ingredients"
-                value={ingredients}
-                onChange={(event) => setIngredients(event.target.value)}
-            />
-            <button type="submit">Add Recipe</button>
+            <button type="submit" className="recipe-create-button">Add</button>
         </form>
     );
 }

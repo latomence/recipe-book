@@ -35,12 +35,6 @@ function App() {
       <h1 className="main-title">Recipe Book</h1>
 
       {/* Recipe creation */}
-      <form className="new-recipe-form">
-        <input type="text" className="recipe-title-input" placeholder="Add a new recipe..." />
-        <button className="recipe-create-button">Add</button>
-      </form>
-
-
       {selectedRecipe ? (
         <RecipeDetail recipe={selectedRecipe} updateRecipe={updateRecipe} />
       ) : (
