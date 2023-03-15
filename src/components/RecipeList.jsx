@@ -2,15 +2,17 @@ import React from "react";
 
 function RecipeList({ recipes, deleteRecipe, selectRecipe }) {
     return (
-        <ul>
-            {recipes.map((recipe) => (
-                <li key={recipe.id}>
-                    {recipe.title}
-                    <button onClick={() => deleteRecipe(recipe.id)}>Delete</button>
-                    <button onClick={() => selectRecipe(recipe)}>Edit</button>
-                </li>
-            ))}
-        </ul>
+        <div className="recipe-book">
+                {recipes.map((recipe) => (
+                    <div className="recipe" key={recipe.id}>
+                        <div className="recipe-title">{recipe.title}</div>
+                        <div className="recipe-actions">
+                            <button onClick={() => selectRecipe(recipe)} className="recipe-edit-button">Edit</button>
+                            <button onClick={() => deleteRecipe(recipe.id)} className="recipe-delete-button">Delete</button>
+                        </div>
+                    </div>
+                ))}
+        </div>
     );
 }
 

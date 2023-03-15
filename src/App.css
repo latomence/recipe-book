@@ -61,7 +61,7 @@ button {
   color: #fff;
   cursor: pointer;
   transition: all 0.25s;
-  outline: none;
+  outline: none !important;
 }
 button:hover {
   background-color: #45627d;
@@ -89,6 +89,7 @@ input[type="checkbox"]:checked {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vh;
   min-height: 100vh;
   overflow-y: auto;
   color: #1e3041;
@@ -118,14 +119,14 @@ input[type="checkbox"]:checked {
   font-size: 1.5rem;
   font-weight: 500;
   border: none;
-  outline: none;
+  outline: none !important;
   background-color: transparent;
   padding: 1rem;
   color: #1e3041;
 }
 
 .recipe-create-button {
-  outline: none;
+  outline: none !important;
   border: none;
   font-size: 1.5rem;
   background-color: #1e3041;
@@ -173,7 +174,7 @@ input[type="checkbox"]:checked {
 }
 
 .recipe-edit-button {
-  outline: none;
+  outline: none !important;
   border-color: #1e3041;
   background-color: transparent;
   color: #1e3041;
@@ -186,7 +187,7 @@ input[type="checkbox"]:checked {
 }
 
 .recipe-delete-button {
-  outline: none;
+  outline: none !important;
   border: none;
   transition: all 0.2s ease-in-out;
 }
@@ -206,7 +207,7 @@ input[type="checkbox"]:checked {
   font-size: 1.5rem;
   font-weight: 500;
   border: none;
-  outline: none;
+  outline: none !important;
   background-color: transparent;
   padding: 1rem;
   color: #1e3041;
@@ -219,7 +220,7 @@ input[type="checkbox"]:checked {
   font-size: 1rem;
   font-weight: 500;
   border: none;
-  outline: none;
+  outline: none !important;
   background-color: transparent;
   padding: 1rem;
   color: #1e3041;
@@ -249,8 +250,12 @@ input[type="checkbox"]:checked {
   justify-content: space-between;
   gap: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: #ececec;
+  border: none;
+  outline: none !important;
+  background-color: transparent;
+  color: #1e3041;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .recipe-ingredient-input, .recipe-new-ingredient-input {
@@ -258,7 +263,7 @@ input[type="checkbox"]:checked {
   font-size: 1rem;
   font-weight: 500;
   border: none;
-  outline: none;
+  outline: none !important;
   background-color: transparent;
   padding: 0.5rem;
   color: #1e3041;
@@ -279,7 +284,7 @@ input[type="checkbox"]:checked {
 
 .recipe-ingredient-delete-button {
   opacity: 0;
-  outline: none;
+  outline: none !important;
   border-color: #1e3041;
   background-color: transparent;
   color: #1e3041;
